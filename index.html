@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+
+<!-- ----------Header-section--------------- -->
+
+    <header id="header">
+      <div>
+        <p id="para1">GOOD MORNING</p>
+        <h1 id="heading1">Habit<span>FLOW</span></h1>
+      </div>
+      <div class="date-box"><p>Tuesday, 8 sep</p></div>
+    </header>
+<!-- ----------Day Streak-section--------------- -->
+
+    <section id="streak-section">
+      <div id="streak-no">0</div>
+      <div id="streak-info">
+        <h3>🔥 Day Streak!</h3>
+        <p>Keep completing all habits daily</p>
+      </div>
+      <div class="fire-icon">
+        <h1>🔥</h1>
+      </div>
+    </section>
+
+<!-- ----------Progress-section--------------- -->
+
+    <section id="progress-section">
+      <div class="circle-box">
+        <strong id="progress-percent">50%</strong>
+        <small>done</small>
+      </div>
+      <div class="progress-info">
+        <h3 class="habitNum">1 of 2 completed</h3>
+        <p class="remainingHabit">2 habits remaining - keep going!</p>
+      </div>
+    </section>
+
+<!-- ----------Weekly Habit Progress-section--------------- -->
+
+    <p class="week-tittle">THIS WEEK</p>
+    <section id="week-section">
+      <div>
+        <div class="day-box">S</div>
+        <small>S</small>
+      </div>
+      <div>
+        <div class="day-box">M</div>
+        <small>M</small>
+      </div>
+      <div>
+      <div class="day-box">T</div>
+        <small>T</small>
+      </div>
+      <div>
+        <div class="day-box">W</div>
+        <small>W</small>
+      </div>
+      <div>
+        <div class="day-box">T</div>
+        <small>T</small>
+      </div>
+      <div>
+        <div class="day-box">F</div>
+        <small>F</small>
+      </div>
+      <div>
+        <div class="day-box">S</div>
+        <small>S</small>
+      </div>
+    </section>
+
+<!-- ----------Today's Habit Adding-section--------------- -->
+
+    <section id="habit-section">
+<div id="section-header">
+  <h2>Today's Habits</h2>
+  <button class="habitBtn" onclick="showPanel(event)">+</button>
+</div>
+<ul id="habitList">
+
+</ul>
+    </section>
+
+    <!-- <form onsubmit="addHabits(event)">
+      <label for="userInput">HABIT NAME</label>
+      <input type="text" id="userInput" required />
+      <button>+ Add</button>
+    </form> -->
+
+<!-- ----------Emoji Selection-section--------------- -->
+
+    <div id="habitModal-section" style="display: none;">
+    <div class="habitModal-content">
+      <div class="modol-handle-box"><button class="modal-handle-btn" onclick="hidePanel()"></button></div>
+      <h2>Add New Habit</h2>
+      <label for="emoji">CHOOSE AN EMOJI</label>
+       <div id="emoji-list">
+            <button>💪</button>
+            <button>🏃</button>
+            <button>📚</button>
+            <button>💧</button>
+            <button>🧘</button>
+            <button>🍎</button>
+            <button>😴</button>
+            <button>🧹</button>
+            <button>🎯</button>
+            <button>🌿</button>
+            <button>🙏</button>
+            <button>🎵</button>
+            <button>🧠</button>
+            <button>❤️</button>
+            <button>⚡</button>
+            <button>🚶</button>
+            <button>🥗</button>
+            <button>☕</button>
+            <button>📝</button>
+            <button>🌞</button>
+        </div>
+
+<!-- ----------Habit Name-section--------------- -->
+
+        <label>HABIT NAME</label>
+        <input id="userInput" 
+            type="text"
+            placeholder="e.g. Morning workout, Drink water...">
+
+<!-- ----------Best Time-section--------------- -->
+
+             <label>BEST TIME</label>
+      <select id="userInput2">
+        <option value="Morning">🌅Morning</option>
+        <option value="Afternoon">🌞Afternoon</option>
+        <option value="Evening">🌆Evening</option>
+        <option value="Anytime">⏰Anytime</option>
+      </select>
+      <button onclick="createHabit()" id="add-habit-btn">✅ Add Habit</button>
+    </div>
+    </div>
+    </main>
+    <!-- <div class="box">Hello</div> -->
+    <script src="./app.js"></script>
+  </body>
+</html>
