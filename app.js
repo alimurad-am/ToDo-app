@@ -120,27 +120,46 @@ function habitCompelet(index) {
 function showHabits() {
   list.innerHTML = "";
 
+  if (Habits.length === 0) {
+    list.innerHTML = `
+      <div class="empty-habit">
+        <div class="empty-icon">✨</div>
+        <p>No habits yet.</p>
+        <p>Tap + to add your first habit<br>
+        and start building consistency!</p>
+      </div>
+    `;
+    updateStreak();
+    return;
+  }
+
   for (let i = 0; i < Habits.length; i++) {
     list.innerHTML += `
-           <li class="habit-card ${Habits[i].completed ? "completed" : ""}">
+      <li class="habit-card ${Habits[i].completed ? "completed" : ""}">
+        <div class="habit-left">
+          <div class="habit-emoji">
+            <p>${Habits[i].emoji}</p>
+          </div>
 
-                <div class="habit-left">
+          <div class="habit-info">
+            <h3>${Habits[i].name}</h3>
+            <p>Best time: ${Habits[i].time}</p>
+          </div>
+        </div>
 
-                    <div class="habit-emoji">
-                       <p> ${Habits[i].emoji} </p>
-                    </div>
+        <div class="cardBtn">
+          <button onclick="habitCompelet(${i})"
+            class="habit-check ${Habits[i].completed ? "completed" : ""}">
+            ✓
+          </button>
 
-                    <div class="habit-info">
-                        <h3>${Habits[i].name}</h3>
-                        <p>Best time: ${Habits[i].time}</p>
-                    </div>
-
-                </div>
-
-                <div class="cardBtn"><button onclick="habitCompelet(${i})" class="habit-check ${Habits[i].completed ? "completed" : ""}">✓</button>
-                <button onclick="deleteHabits(${i})" class="habit-delete">❌</button> </div>
-            </li>
-        `;
+          <button onclick="deleteHabits(${i})"
+            class="habit-delete">
+            ❌
+          </button>
+        </div>
+      </li>
+    `;
   }
 
   input.value = "";
@@ -494,42 +513,39 @@ function getHabitStreak(habit) {
 }
 
 function showHabitStreaks() {
+  habitStreakList.innerHTML = "";
 
-    habitStreakList.innerHTML = "";
+  if (Habits.length === 0) {
+    habitStreakList.innerHTML = `
+      <div class="empty-stats">
+        <div class="empty-stats-icon">📊</div>
+        <p>No habits to show yet.</p>
+      </div>
+    `;
+    return;
+  }
 
-    for (let i = 0; i < Habits.length; i++) {
+  for (let i = 0; i < Habits.length; i++) {
+    let streak = getHabitStreak(Habits[i]);
+    let progress = Math.min(streak * 10, 100);
 
-        let streak = getHabitStreak(Habits[i]);
+    habitStreakList.innerHTML += `
+      <div class="habit-streak-card">
+        <div class="streak-card-top">
+          <div class="streak-habit-name">
+            ${Habits[i].emoji} ${Habits[i].name}
+          </div>
 
-        let progress = Math.min(streak * 10, 100);
+          <div class="streak-days">
+            🔥 ${streak} days
+          </div>
+        </div>
 
-        habitStreakList.innerHTML += `
-            <div class="habit-streak-card">
-
-                <div class="streak-card-top">
-
-                    <div class="streak-habit-name">
-                        ${Habits[i].emoji} ${Habits[i].name}
-                    </div>
-
-                    <div class="streak-days">
-                        🔥 ${streak} days
-                    </div>
-
-                </div>
-
-                <div class="streak-progress">
-
-                    <div
-                        class="streak-progress-bar"
-                        style="width: ${progress}%">
-                    </div>
-
-                </div>
-
-            </div>
-        `;
-    }
+        <div class="streak-progress">
+          <div class="streak-progress-bar" style="width: ${progress}%"></div>
+        </div>
+      </div>
+    `;
+  }
 }
-
 showHabitStreaks();

@@ -313,6 +313,28 @@ div > small {
     gap: 10px;
 }
 
+.empty-habit {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    color: #9a9ca5;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.empty-habit p:first-of-type {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.empty-habit p:last-of-type {
+    font-size: 14px;
+    line-height: 24px;
+}
+
 /*----------Habit-Modal-section---------------*/
 
 #habitModal-section {
@@ -578,4 +600,23 @@ main {
         #ee7f45
     );
     border-radius: 10px;
+}
+
+.empty-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.empty-stats-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.empty-stats p {
+    color: #9a9ca5;
+    font-size: 14px;
 }
