@@ -23,14 +23,14 @@ body{
     justify-content: center;
     align-content: center;
     background-color: var(--bg-primary);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Inter', sans-serif;
     min-height: 100vh;
 }
 
 /*----------Header-section---------------*/
 
 #header{
-    width: 93%;
+    width: 96%;
     display: flex;
     justify-content: space-between;
 }
@@ -41,19 +41,19 @@ body{
 }
 #heading1{
     color: white;
-    font-size: 29px;
+    font-size: 27px;
     margin-top: 4px;
 }
 .date-box > p{
-    font-size: 13px;
+    font-size: 12px;
     color: grey;
     border: 1px solid var(--border);
     margin-top: 10px;
     border-radius: 10px;
-    padding: 5px 13px;
+    padding: 7px 10px;
     background-color: var(--bg-card);
 }
- 
+
 #heading1 > span{
 color: var(--bg-card1);
 }
@@ -61,7 +61,7 @@ color: var(--bg-card1);
 /*----------Streak-section---------------*/
 
 #streak-section{
-    width: 93%;
+    width: 96%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,11 +80,11 @@ color: var(--bg-card1);
     margin-right: 10px;
 }
 #streak-info > h3{
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
 }
 #streak-info > p{
-font-size: 12px;
+font-size: 11px;
 }
 .fire-icon > h1{
 font-size: 40px;
@@ -93,7 +93,7 @@ font-size: 40px;
 /*----------progress-section---------------*/
 
 #progress-section{
-    width: 93%;
+    width: 96%;
     height: 20vh;
     display: flex;
     align-items: center;
@@ -147,28 +147,28 @@ font-size: 40px;
 }
 .progress-info > h3{
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
-    padding-right: 27px;
+    padding-right: 22px;
 }
 .progress-info > p{
     margin-top: 5px;
     color: #9a9ca5;
-    font-size: 16px;
-    padding-right: 27px;
+    font-size: 15px;
+    padding-right: 22px;
 
 }
 
 /*----------Week-section---------------*/
 
 .week-tittle {
-    width: 93%;
+    width: 96%;
     margin: 22px auto 10px;
     font-weight: bold;
     color: #9a9ca5;
 }
 #week-section{
-    width: 93%;
+    width: 96%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,7 +203,7 @@ div > small {
 /*----------Habit-section---------------*/
 
 #habit-section{
-    width: 93%;
+    width: 96%;
     margin-top: 22px;
 }
 #section-header{
@@ -457,7 +457,7 @@ div > small {
     left: 50%;
     transform: translateX(-50%);
 
-    width: 90%;
+    width: 96%;
     max-width: 418px;
     height: 70px;
 
