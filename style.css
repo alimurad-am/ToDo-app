@@ -30,7 +30,7 @@ body{
 /*----------Header-section---------------*/
 
 #header{
-    width: 90%;
+    width: 93%;
     display: flex;
     justify-content: space-between;
 }
@@ -45,12 +45,13 @@ body{
     margin-top: 4px;
 }
 .date-box > p{
-    font-size: 14px;
+    font-size: 13px;
     color: grey;
     border: 1px solid var(--border);
     margin-top: 10px;
     border-radius: 10px;
     padding: 5px 13px;
+    background-color: var(--bg-card);
 }
  
 #heading1 > span{
@@ -60,7 +61,7 @@ color: var(--bg-card1);
 /*----------Streak-section---------------*/
 
 #streak-section{
-    width: 90%;
+    width: 93%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,13 +93,13 @@ font-size: 40px;
 /*----------progress-section---------------*/
 
 #progress-section{
-    width: 90%;
+    width: 93%;
     height: 20vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 14px;
-    /* gap: 18px; */
+    gap: 18px;
     border: 2px solid var(--border);
     border-radius: 15px;
     background-color: var(--bg-card);
@@ -148,24 +149,26 @@ font-size: 40px;
     color: white;
     font-size: 18px;
     line-height: 30px;
+    padding-right: 27px;
 }
 .progress-info > p{
     margin-top: 5px;
     color: #9a9ca5;
     font-size: 16px;
-    margin-right: 10px;
+    padding-right: 27px;
+
 }
 
 /*----------Week-section---------------*/
 
 .week-tittle {
-    margin-top: 22px;
-    margin-bottom: 10px;
+    width: 93%;
+    margin: 22px auto 10px;
     font-weight: bold;
     color: #9a9ca5;
 }
 #week-section{
-    width: 90%;
+    width: 93%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -200,7 +203,7 @@ div > small {
 /*----------Habit-section---------------*/
 
 #habit-section{
-    width: 90%;
+    width: 93%;
     margin-top: 22px;
 }
 #section-header{
@@ -333,7 +336,7 @@ div > small {
 .empty-habit p:last-of-type {
     font-size: 14px;
     line-height: 24px;
-}
+}   
 
 /*----------Habit-Modal-section---------------*/
 
@@ -348,7 +351,7 @@ div > small {
 }
 .habitModal-content {
      width: calc(100% - 44px);
-    max-width: 374px;
+    max-width: 400px;
     padding: 20px;
     background-color: #1e2230;
     border-radius: 22px 22px 0 0;
@@ -449,17 +452,23 @@ div > small {
 /*----------Footer Navigation---------------*/
 
 .footer-button {
-    position: fixed;
+ position: fixed;
     bottom: 0;
-    width: calc(90vw - 40px);
-    max-width: 337px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 418px;
     height: 70px;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     background-color: rgba(21, 26, 38, 0.90);
     backdrop-filter: blur(10px);
     border-top: 1px solid #2a3040;
+
     z-index: 1;
 }
 
@@ -496,13 +505,14 @@ div > small {
 
 
 main {
-    width: 100%;
+       width: 100%;
     max-width: 418px;
+    margin: 0 auto;
     padding: 0 22px 90px;
 }
 
 #stats-section {
-    width: 90%;
+    width: 93%;
     margin-top: 22px;
     display: none;
 
@@ -619,4 +629,14 @@ main {
 .empty-stats p {
     color: #9a9ca5;
     font-size: 14px;
+}
+#header,
+#streak-section,
+#progress-section,
+#week-section,
+#habit-section,
+#stats-section,
+.week-tittle {
+    margin-left: auto;
+    margin-right: auto;
 }
